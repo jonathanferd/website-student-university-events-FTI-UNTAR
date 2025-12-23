@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: 'Segoe UI';
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: white;
+    box-shadow: 0 2px 10px #662D914D;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    height: 60px;
+    object-fit: contain;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.tombol1 button {
+    width: 120px;
+    height: 45px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: white;
+    color: #662D91;
+    border: 2px solid #662D91;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tombol1 button:hover {
+    background-color: #662D91;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px #662D914D;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 15px;
+    background: #f8f8f8;
+    border-radius: 25px;
+    border: 1px solid #662D914D;
+}
+
+.icon-text img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-text {
+    font-weight: 600;
+    color: #662D91;
+    font-size: 14px;
+}
+
+.bottom-text {
+    font-size: 12px;
+    color: gray;
+}
+
+.body {
+    padding: 40px 60px;
+    background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+    min-height: calc(100vh - 100px);
+}
+
+.backbutton h2 {
+    margin-bottom: 30px;
+}
+
+.backbutton a {
+    color: #662D91;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.backbutton a:hover {
+    text-decoration: underline;
+}
+
+.title h1 {
+    color: #662D91;
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+.certificate-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+}
+
+.certificate-item {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #662D914D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px #662D914D;
+}
+
+.certificate-info h3 {
+    color: #662D91;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.certificate-info .date {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.certificate-info .status {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.status.completed {
+    background: #662D911A;
+    color: #662D91;
+}
+
+.btn-download {
+    padding: 12px 30px;
+    background: #662D91;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background: #551f7a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px #662D914D;
+}
+
+.no-certificate {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #662D914D;
+}
+
+.no-certificate p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.page-btn {
+    border: 2px solid #662D91;
+    background: white;
+    color: #662D91;
+    border-radius: 8px;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    min-width: 45px;
+    text-align: center;
+}
+
+.page-btn:hover {
+    background: #662D91;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px #662D914D;
+}
+
+.page-btn.active {
+    background: #662D91;
+    color: white;
+    font-weight: 600;
+    cursor: default;
+}
+
+.page-btn.active:hover {
+    transform: none;
+}
+
+.page-dots {
+    color: #666;
+    font-weight: 600;
+    padding: 0 5px;
+    user-select: none;
+}
+

@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: 'Segoe UI';
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: relative;
+    z-index: 10;
+}
+
+.button-container {
+    display: flex;
+    gap: 15px;
+}
+
+.button-container button {
+    width: 120px;
+    height: 45px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.menu .tombol1 button {
+    background-color: white;
+    color: #662D91;
+    border: 2px solid #662D91;
+}
+
+.menu .tombol2 button {
+    background-color: #662D91;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(102, 45, 145, 0.3);
+}
+
+.menu button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(104, 45, 150, 0.4);
+}
+
+.menu .tombol1 button:hover {
+    background-color: #662D91;
+    color: white;
+}
+
+.background-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.15;
+    z-index: 1;
+}
+
+.register-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(90%, 480px);
+    padding: 50px 40px;
+    background: rgba(252, 247, 247, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(103, 44, 148, 0.2);
+    z-index: 5;
+    border: 1px solid rgba(96, 40, 139, 0.1);
+}
+
+.register-box h2 {
+    color: #662D91;
+    margin-bottom: 35px;
+    font-size: clamp(24px, 5vw, 32px);
+    font-weight: 600;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.register-box input {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    outline: none;
+    font-size: 15px;
+    background-color: #fafafa;
+}
+
+.register-box select {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    outline: none;
+    font-size: 15px;
+    background-color: #fafafa;
+    cursor: pointer;
+    appearance: none;
+    background-position: right 20px center;
+    background-size: 12px;
+}
+
+.register-box input:focus,
+.register-box select:focus {
+    border-color: #662D91;
+    background-color: white;
+    box-shadow: 0 0 0 4px rgba(102, 45, 145, 0.1);
+}
+
+.register-box input::placeholder {
+    color: #999;
+}
+
+.register-box select option {
+    padding: 12px;
+    background-color: white;
+}
+
+.register-box select option:disabled {
+    color: #999;
+}
+
+.login-text {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0 25px;
+}
+
+.register-box .login-link {
+    text-decoration: none;
+    color: #662D91;
+    font-weight: 600;
+}
+
+.register-box .login-link:hover {
+    text-decoration: underline;
+}
+
+.btn-signup {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #662D91 0%, #7d3ba8 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(102, 45, 145, 0.3);
+}
+
+.btn-signup:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(102, 45, 145, 0.4);
+}

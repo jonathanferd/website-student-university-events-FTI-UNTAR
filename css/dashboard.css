@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+* {margin: 0;padding: 0;box-sizing: border-box;}
+
+body {
+    background: linear-gradient(135deg, #fdf5f5 0%, #f8f4f4 100%);
+    font-family: 'Segoe UI';
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: white;
+    box-shadow: 0 2px 10px #662D914D;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.button-container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.button-container button {
+    width: 120px;
+    height: 45px;
+    font-size: 16px;
+    background-color: #662D91;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.button-container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px #662D914D;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 15px;
+    background: #fffafa;
+    border-radius: 25px;
+    border: 1px solid #662D914D;
+}
+
+.icon-text img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.icon-text .text {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-text .top-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #662D91;
+}
+
+.icon-text .bottom-text {
+    font-size: 12px;
+    color: gray;
+}
+
+.body {
+    padding: 0 40px;
+}
+
+.backbutton a {
+    color: #662D91;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.page-title {
+    color: #662D91;
+    font-size: clamp(24px, 4vw, 28px);
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.tab-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0;
+    overflow-x: auto;
+    background: white;
+    padding: 0 20px;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 2px 10px #662D914D;
+}
+
+.tab-btn {
+    padding: 18px 30px;
+    background: transparent;
+    border: none;
+    border-bottom: 4px solid transparent;
+    color: #1a1919;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.tab-btn:hover {
+    color: #662D91;
+    background: #662D911A;
+}
+
+.tab-btn.active {
+    color: #662D91;
+    border-bottom-color: #662D91;
+    font-weight: 600;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.admin-panel {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.admin-box {
+    flex: 1;
+    min-width: 300px;
+    max-height: 600px; 
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 15px #662D914D;
+    overflow-y: auto; 
+}
+
+.admin-box.qr-box {
+    max-height: none;
+    min-width: 100%; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    overflow-y: visible; 
+}
+
+#laporan .admin-panel {
+    display: block;
+}
+
+#laporan .admin-box {
+    max-height: none !important;
+    overflow-y: visible !important;
+    max-width: 100%;
+}
+
+.admin-box h3 {
+    color: #662D91;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.admin-box label {
+    display: block;
+    font-weight: 500;
+    margin: 15px 0 8px;
+    color: #333;
+    font-size: 14px;
+}
+
+.admin-box input[type="text"],
+.admin-box input[type="email"],
+.admin-box input[type="password"],
+.admin-box input[type="date"],
+.admin-box input[type="file"],
+.admin-box select,
+.admin-box textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    outline: none;
+    font-size: 15px;
+    transition: border 0.3s ease;
+    background-color: #fafafa;
+    font-family: inherit;
+}
+
+.admin-box input[type="number"] {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    outline: none;
+    font-size: 15px;
+    transition: border 0.3s ease;
+    background-color: #fafafa;
+    font-family: inherit;
+    -moz-appearance: textfield;
+}
+
+.admin-box input[type="number"]::-webkit-inner-spin-button,
+.admin-box input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.admin-box input:focus,
+.admin-box select:focus,
+.admin-box textarea:focus {
+    border-color: #662D91;
+    background-color: white;
+}
+
+.admin-box textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.admin-box select {
+    cursor: pointer;
+}
+
+.confirm-button {
+    width: 100%;
+    margin-top: 20px;
+    background: #662D91;
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.confirm-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px #662D914D;
+}
+
+.data-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.data-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 18px;
+    background: #fafafa;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    gap: 15px;
+}
+
+.data-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.data-info strong {
+    font-size: 15px;
+    color: #333;
+    font-weight: 600;
+}
+
+.data-info span {
+    font-size: 13px;
+    color: #666;
+}
+
+
+.data-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-action {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-action.edit {
+    background: #662D91;
+    color: white;
+}
+
+.btn-action.complete {
+    background: #28a745;
+    color: white;
+}
+
+.btn-action.complete:hover {
+    background: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.btn-action.edit:hover {
+    transform: translateY(-2px);
+}
+
+.btn-action.delete {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-action.delete:hover {
+    transform: translateY(-2px);
+}
+
+.alert {
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+    border: 2px solid #c3e6cb;
+}
+
+.alert-error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 2px solid #f5c6cb;
+}
+
+.file-info {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.summary-box {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 2px solid #662D911A;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-item strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.summary-item span {
+    color: #666;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.report-table thead {
+    background: #662D91;
+    color: white;
+}
+
+.report-table th {
+    padding: 15px 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.report-table tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+    transition: background 0.2s ease;
+}
+
+.report-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.report-table td {
+    padding: 12px;
+    font-size: 14px;
+    color: #333;
+}
+
+.report-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.btn-print {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    background: #662D91;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-print:hover {
+    background: #551f7a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px #662D914D;
+}
+
+@media print {
+    .menu,
+    .backbutton,
+    .tab-container,
+    .btn-print,
+    .confirm-button,
+    form,
+    .alert {
+        display: none !important;
+    }
+
+    .container,
+    .body {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: white !important;
+    }
+
+    .admin-panel {
+        display: block !important;
+        padding: 0 !important;
+    }
+
+    .admin-box {
+        width: 100% !important;
+        max-height: none !important;
+        overflow: visible !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 10px !important;
+    }
+
+    .admin-box h3 {
+        color: #000 !important;
+        font-size: 18px !important;
+        border-bottom: 2px solid #000;
+        padding-bottom: 10px;
+        margin-bottom: 15px !important;
+    }
+
+    .admin-box h4, .admin-box h5 {
+        color: #000 !important;
+        margin-top: 15px !important;
+    }
+
+    .summary-box {
+        background: #f8f8f8 !important;
+        border: 1px solid #000 !important;
+        padding: 15px !important;
+        page-break-inside: avoid;
+    }
+
+    .summary-item {
+        border-bottom: 1px solid #ddd !important;
+    }
+
+    .report-table {
+        width: 100% !important;
+        border-collapse: collapse !important;
+        font-size: 11px !important;
+        page-break-inside: auto;
+    }
+
+    .report-table thead {
+        background: #f0f0f0 !important;
+        color: #000 !important;
+    }
+
+    .report-table th,
+    .report-table td {
+        border: 1px solid #000 !important;
+        padding: 8px !important;
+        color: #000 !important;
+    }
+
+    .report-table tbody tr {
+        page-break-inside: avoid;
+    }
+
+    @page {
+        margin: 1.5cm;
+        size: A4;
+    }
+
+    body::before {
+        content: "Laporan Sistem Acara FTI UNTAR";
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #000;
+    }
+}

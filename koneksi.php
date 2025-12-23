@@ -3,7 +3,6 @@ $host = 'skripsi-blackjack.b.aivencloud.com';
 $port = 24455;
 $dbname = 'acaraFTI';
 $user = 'avnadmin';
-$password = 'AVNS_OMUIwCO8-LjX7cU10DZ';
 $ssl_ca = __DIR__ . '/ca.pem';
 
 try {
